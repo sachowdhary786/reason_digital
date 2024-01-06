@@ -1,0 +1,89 @@
+.image-with-text {
+    .grid {
+        display: flex;
+        display: -webkit-box;
+        flex-wrap: wrap;
+        align-items: stretch;
+        -webkit-box-align: stretch;
+
+        &__item {
+            margin-top: 0;
+            padding-left: 0;
+            min-height: 15em;
+            width: 100%;
+            min-height: 15em;
+            width: 100%;
+
+            @media screen and (min-width: 1024px) {
+                width: 50%;
+                min-height: 18em;
+            }
+
+            &-title {
+                font-size: 2.25em;
+                line-height: 1.2;
+            }
+
+            &-quote {
+                font-size: 1.5em;
+                line-height: 1.3;
+                font-weight: 400;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+
+    .block {
+        color: white;
+        display: block;
+        font-weight: 400;
+        text-decoration: none;
+        background: teal;
+
+        &--card {
+            border: none;
+        }
+
+        &__image-surround {
+            -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+            order: 1;
+        }
+
+        &__image-background {
+            background-position: 50%;
+            background-size: cover;
+            height: 100%;
+            min-height: 12em;
+
+            @media screen and (min-width: 25em) {
+                min-height: 18em;
+            }
+        }
+
+        &__content {
+            position: relative;
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+
+            .container {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                align-items: start;
+            }
+
+            &__cta {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
